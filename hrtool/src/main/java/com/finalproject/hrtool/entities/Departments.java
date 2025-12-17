@@ -34,5 +34,5 @@ public class Departments {
     @OneToMany(mappedBy="dept")
     @JsonIgnore
     @ToString.Exclude
-    private List<DeptManager> deptMgt;
+    private List<DeptManager> deptMgr;
 }
