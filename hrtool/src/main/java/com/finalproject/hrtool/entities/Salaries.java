@@ -1,5 +1,6 @@
 package com.finalproject.hrtool.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.finalproject.hrtool.entities.ids.SalariesId;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,9 +25,11 @@ public class Salaries implements Comparable<Salaries> {
 
     @Id
     @Column(name = "from_date")
+    @JsonProperty("from_date")
     private LocalDate fromDate;
 
     @Column(name = "to_date")
+    @JsonProperty("to_date")
     private LocalDate toDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
