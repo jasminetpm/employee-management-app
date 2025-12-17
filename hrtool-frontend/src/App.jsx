@@ -1,21 +1,44 @@
+// src/App.jsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import Promote from './pages/Promote';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+
+// Create your custom theme
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: '#131213', // Your main brand color (e.g., Green)
+        },
+        secondary: {
+            main: '#9D6777', // Your accent color (e.g., Orange)
+        },
+    },
+
+    typography: {
+        fontFamily: [
+            'Inter',
+            'Arial', //fallback
+            'sans-serif', //fallback
+        ].join(','),
+    }
+});
 
 function App() {
     return (
-        <BrowserRouter>
-            <CssBaseline /> {/* Normalizes CSS across browsers */}
-            <NavBar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/search" element={<Search />} />
-                <Route path="/promote" element={<Promote />} />
-            </Routes>
-        </BrowserRouter>
+        <ThemeProvider theme={theme}> {/* Wrap everything in ThemeProvider */}
+            <BrowserRouter>
+                <CssBaseline />  {/* Normalizes CSS across browsers */}
+                <NavBar /> {/* This will now automatically be Green! */}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/promote" element={<Promote />} />
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }
 
