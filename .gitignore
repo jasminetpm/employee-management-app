@@ -1,0 +1,21 @@
+# ========= IntelliJ =========
+.idea/
+*.iml
+
+# ========= Maven =========
+**/target/
+
+# ========= Node / React =========
+**/node_modules/
+**/dist/
+**/build/
+
+# ========= Logs =========
+*.log
+
+# ========= OS =========
+.DS_Store
+Thumbs.db
+
+# ========= Env =========
+.env
