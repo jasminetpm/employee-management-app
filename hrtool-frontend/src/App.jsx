@@ -31,7 +31,7 @@ function App() {
         <ThemeProvider theme={theme}> {/* Wrap everything in ThemeProvider */}
             <BrowserRouter>
                 <CssBaseline />  {/* Normalizes CSS across browsers */}
-                <NavBar /> {/* This will now automatically be Green! */}
+                <NavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/search" element={<Search />} />
