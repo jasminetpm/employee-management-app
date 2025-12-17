@@ -10,10 +10,10 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#131213', // Your main brand color (e.g., Green)
+            main: '#131213', // Main brand color
         },
         secondary: {
-            main: '#9D6777', // Your accent color (e.g., Orange)
+            main: '#9D6777', // Accent color
         },
     },
 

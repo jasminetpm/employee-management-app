@@ -1,6 +1,6 @@
 :root {
   /* Match the font family from your App.jsx */
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: Inter, Arial, sans-serif;
 
   /* Keep text rendering improvements */
   font-synthesis: none;
